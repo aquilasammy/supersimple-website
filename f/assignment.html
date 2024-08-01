@@ -1,0 +1,34 @@
+<html>
+    <title></title>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            let number = prompt("Enter a number")
+            function findFactors() {
+            // Prompt the user for a number
+            let number = parseInt(prompt("Enter a number to find its factors:"), 10);
+
+            // Check if the input is a valid number
+            if (isNaN(number) || number <= 0) {
+                alert("Please enter a positive number.");
+                return;
+            }
+
+            // Find factors of the number
+            let factors = [];
+            for (let i = 1; i <= number; i++) {
+                if (number % i === 0) {
+                    factors.push(i);
+                }
+            }
+
+            // Display the factors
+            alert("The factors of " + number + " are: " + factors.join(", "));
+        }
+    </script>
+
+    <button onclick="findFactors()">Find Factors</button>
+    </body>
+</html>
